@@ -37,9 +37,15 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+    use('andrewradev/splitjoin.vim')
 
 	use('neovim/nvim-lspconfig')
 	use('jose-elias-alvarez/null-ls.nvim')
 	use('MunifTanjim/prettier.nvim')
+    use {
+        "windwp/nvim-autopairs",
+        confif = function() require("nvim-autopairs").setup {} end
+    }
+    use('theprimeagen/vim-be-good')
 
 end)
